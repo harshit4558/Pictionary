@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+.grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    width: 800px;
+    height: 500px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.left-column {
+    background-color: lightblue;
+    height: 100%;
+    border-right: 2 px solid black;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+.right-column{
+    display: grid;
+    grid-template-rows: 1 fr 1fr ;
+    background-color: lightgreen;
+}
+.top-row{
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    
+    flex-direction: row;
+}
+.bottom-row{
+    
+    grid-column: 2;
+    grid-row: 2;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input-container input{
+    flex: 1;
+    border: 1px solid black;
+}
+.input-container button {
+    background-color: lightblue;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+}
+.messages{
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 10px;
+
+}
+.canvasArea{
+    grid-column: 1;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+
+}
+.clear{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    z-index: 1;
+}
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    width: 250px;
+    z-index: 10; /* Ensure the logo is above other elements */
+} 

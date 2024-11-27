@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img class="logo" src="logo.webp">
+    </div>
+    
+    <div id="grid" class="grid">
+        <div class="left-column">
+            <!-- Your custom element goes here -->
+            <div id="word-display-container">
+                <div id="word-display"></div>
+                <div id="timer-display"></div>
+            </div>
+            <canvas id="canvas" class="canvasArea"></canvas>
+            <button id="clearBtn" class="clear">Clear</button>
+        </div>
+        <div class="right-column">
+            <div class="top-row">
+                
+            </div>
+            <div class="bottom-row">
+                <div id="messages" class="messages"></div>
+                <div class="input-container">
+                <input id="chatInput" type="text" placeholder="Enter text here" class="chatInput"/>
+                <button type="submit" class="sendBtn" id="sendBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
